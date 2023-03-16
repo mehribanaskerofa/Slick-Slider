@@ -63,14 +63,3 @@
     padding: 0 20px;
     background-color: white;
 }
-.slick-dots li.slick-active .slider-content {
-    animation: movingTopToBottom 0.2s linear;
-}
-@keyframes movingTopToBottom {
-    from {
-      top: 0px;
-    }
-    to {
-      top: 50%;
-    }
-}
