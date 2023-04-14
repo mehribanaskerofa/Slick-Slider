@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <style>
+        .detail-item{
+    /* width: 200px; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    /* background-color: red; */
+}
+.detail-item .checkbox{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    /* margin-left: 20px; */
+}
+.detail-item .checkmark{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    transition: 0.2s ease;
+}
+.detail-item .checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.detail-item:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.detail-item input:checked ~ .checkmark{
+    background-color: orangered;
+}
+.detail-item .checkbox:checked ~ .checkmark:after{
+    display: block;
+}
+.detail-item .detail-item-text{
+    margin-left: 30px;
+    line-height: 25px;
+}
+
+
+
+
+.radio_btn {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    margin-right: 15px;
+    cursor: pointer;
+    /* background-color: red; */
+    /* text-transform: uppercase; */
+}
+.radio_btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark_radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radio-text{
+    line-height: 18px;
+    font-size: 16px;
+    text-align: center;
+}
+.radio_btn .checkmark_radio:after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 5px;
+        left: 5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background:white;
+}
+.radio_btn:hover input ~ .checkmark_radio {
+        background-color: rgb(226, 214, 214);
+}
+.radio_btn input:checked ~ .checkmark_radio {
+        background-color: orange;
+}
+.radio_btn input:checked ~ .checkmark_radio:after {
+        display: block !important;
+}
+    </style>
+</head>
+<body>
+    <label class="detail-item">
+        <input type="checkbox" class="checkbox">
+        <span class="checkmark"></span>
+        <div class="detail-item-text">all price</div>
+    </label><br>
+    <label class="radio_btn">
+        <input type="radio" name="radio">
+        <span class="checkmark_radio"></span>
+        <span class="radio-text">XS</span>
+    </label>
+    <label class="radio_btn">
+        <input type="radio" name="radio">
+        <span class="checkmark_radio"></span>
+        <span class="radio-text">S</span>
+    </label>
+    <label class="radio_btn">
+        <input type="radio" name="radio1">
+        <span class="checkmark_radio"></span>
+        <span class="radio-text">XS</span>
+    </label>
+    <label class="radio_btn">
+        <input type="radio" name="radio1">
+        <span class="checkmark_radio"></span>
+        <span class="radio-text">S</span>
+    </label>
+</body>
+</html>

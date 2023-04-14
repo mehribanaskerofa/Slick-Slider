@@ -40,7 +40,6 @@
     word-wrap: break-word;
     width: 400px;
     font-size: 18px;
-    background-color: aqua;
 }
 .slider-btn{
     padding: 10px 24px;
@@ -87,10 +86,17 @@
 
 
 
+/* .div{
+    display: flex;
+}
 
 
-
-
+.div2{
+    width: 300px;
+    height: 399px;
+    background-color: rebeccapurple;
+    margin-left: 30px;
+} */
 
 
 
